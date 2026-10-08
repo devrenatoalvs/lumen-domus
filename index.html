@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Lumen Domus — Luz que habita o lar</title>
+
+  <!-- Favicon emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕯️</text></svg>">
+
+  <!-- Social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lumen Domus — Luz que habita o lar">
+  <meta property="og:description" content="Arte devocional para transformar o seu lar em refúgio espiritual.">
+  <meta name="theme-color" content="#22362E">
+  <meta name="description" content="Arte devocional para transformar o seu lar em refúgio espiritual.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!--
+  ╔══════════════════════════════════════════════════════════╗
+  ║        LUMEN DOMUS — PÁGINA DE LINKS (BIO LINK)         ║
+  ╠══════════════════════════════════════════════════════════╣
+  ║  Como atualizar os links:                                ║
+  ║  Procure por "SUBSTITUA" no código abaixo e troque      ║
+  ║  o href="#placeholder" pelo link real.                   ║
+  ║                                                          ║
+  ║  Após editar, salve como index.html e faça upload        ║
+  ║  no repositório do GitHub (ver instruções no README).    ║
+  ╚══════════════════════════════════════════════════════════╝
+  -->
+
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+
+    /* ── Base ── */
+    body {
+      min-height: 100svh;
+      background-color: #20342c;
+      background-image:
+        radial-gradient(ellipse 80% 40% at 50% -5%, rgba(200,169,107,.10) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 60% at 0% 100%,  rgba(0,0,0,.20) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 60% at 100% 100%, rgba(0,0,0,.20) 0%, transparent 55%);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      color: #F6F2E9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: env(safe-area-inset-top, 0px) 20px env(safe-area-inset-bottom, 0px);
+      padding-top: max(env(safe-area-inset-top, 0px), 52px);
+      padding-bottom: max(env(safe-area-inset-bottom, 0px), 44px);
+    }
+
+    /* ── Page container ── */
+    .page {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ── Profile section ── */
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .logo {
+      width: 62px;
+      height: auto;
+      margin-bottom: 18px;
+    }
+
+    .profile-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 400;
+      letter-spacing: .08em;
+      color: #F6F2E9;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .profile-tagline {
+      font-size: 10px;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: rgba(200,169,107,.60);
+      line-height: 1;
+    }
+
+    /* ── Hairline ── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: rgba(200,169,107,.18);
+      margin-bottom: 26px;
+    }
+
+    /* ── Links nav ── */
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    /* Section label */
+    .section-label {
+      font-size: 10px;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: rgba(200,169,107,.42);
+      padding-left: 15px;
+      margin-top: 6px;
+      margin-bottom: 1px;
+      user-select: none;
+    }
+
+    /* ── Link card base ── */
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      width: 100%;
+      padding: 13px 16px 13px 13px;
+      background: rgba(246,242,233,.04);
+      border: 1px solid rgba(200,169,107,.18);
+      border-left: 3px solid rgba(200,169,107,.35);
+      border-radius: 2px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 160ms ease, border-left-color 160ms ease;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .link-card:hover,
+    .link-card:focus-visible {
+      background: rgba(246,242,233,.08);
+      border-left-color: #C8A96B;
+      outline: none;
+    }
+
+    .link-card:focus-visible {
+      outline: 2px solid rgba(200,169,107,.6);
+      outline-offset: 2px;
+    }
+
+    /* Primary variant — Instagram */
+    .link-card.primary {
+      background: rgba(200,169,107,.08);
+      border-left-color: #C8A96B;
+    }
+
+    .link-card.primary:hover,
+    .link-card.primary:focus-visible {
+      background: rgba(200,169,107,.14);
+    }
+
+    /* Disabled variant — Site em breve */
+    .link-card.disabled {
+      opacity: .38;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    /* Icon */
+    .link-icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      opacity: .70;
+    }
+
+    /* Text block */
+    .link-text { flex: 1; min-width: 0; }
+
+    .link-label {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #F6F2E9;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .link-desc {
+      display: block;
+      font-size: 11px;
+      color: rgba(200,169,107,.55);
+      margin-top: 2px;
+      line-height: 1.4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Right side */
+    .link-right {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .link-arrow {
+      width: 14px;
+      height: 14px;
+      opacity: .25;
+    }
+
+    .soon-badge {
+      font-size: 9px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(200,169,107,.5);
+      border: 1px solid rgba(200,169,107,.25);
+      padding: 2px 7px;
+      border-radius: 1px;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Ornament line */
+    .footer-ornament {
+      width: 32px;
+      height: 1px;
+      background: rgba(200,169,107,.22);
+      margin-bottom: 10px;
+    }
+
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 300;
+      color: rgba(246,242,233,.28);
+      letter-spacing: .04em;
+    }
+
+    .footer-copy {
+      font-size: 10px;
+      color: rgba(246,242,233,.16);
+      letter-spacing: .06em;
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      .link-card { transition: none; }
+    }
+
+    /* ── Tablet (640px+) ── */
+    @media (min-width: 640px) {
+      body {
+        padding-top: 72px;
+        padding-bottom: 56px;
+      }
+
+      .page { max-width: 420px; }
+
+      .logo { width: 70px; }
+
+      .profile-name { font-size: 28px; }
+
+      .link-card {
+        padding: 15px 18px 15px 15px;
+      }
+
+      .link-label { font-size: 17px; }
+    }
+
+    /* ── Desktop (1024px+) ── */
+    @media (min-width: 1024px) {
+      body { padding-top: 80px; }
+      .page { max-width: 440px; }
+    }
+  </style>
+</head>
+<body>
+
+<main class="page">
+
+  <!-- ── Profile ── -->
+  <header class="profile">
+
+    <!-- Logo SVG inline — símbolo da marca -->
+    <svg class="logo" viewBox="0 0 80 98" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- Cruz acima do arco -->
+      <line x1="40" y1="2"  x2="40" y2="13" stroke="#C8A96B" stroke-width="1.6" stroke-linecap="round"/>
+      <line x1="33" y1="6.5" x2="47" y2="6.5" stroke="#C8A96B" stroke-width="1.6" stroke-linecap="round"/>
+      <!-- Arco externo (janela gótica) -->
+      <path d="M10 90 L10 43 C10 17 40 11 40 11 C40 11 70 17 70 43 L70 90 Z"
+            stroke="#C8A96B" stroke-width="1.6" fill="none"/>
+      <!-- Arco interno -->
+      <path d="M17 90 L17 45 C17 24 40 18 40 18 C40 18 63 24 63 45 L63 90 Z"
+            stroke="#C8A96B" stroke-width="0.9" stroke-opacity="0.55" fill="none"/>
+      <!-- Inicial L -->
+      <polyline points="21,36 21,68 34,68"
+                stroke="#C8A96B" stroke-width="2.2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Inicial D -->
+      <line x1="39" y1="36" x2="39" y2="68"
+            stroke="#C8A96B" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M39 36 C59 36 61 52 39 68"
+            stroke="#C8A96B" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    </svg>
+
+    <h1 class="profile-name">Lumen Domus</h1>
+    <p class="profile-tagline">Arte devocional para o lar sagrado</p>
+  </header>
+
+  <div class="divider" role="presentation"></div>
+
+  <!-- ── Links ── -->
+  <nav class="links" aria-label="Links da Lumen Domus">
+
+    <!-- ============================================================
+         INSTAGRAM — link principal
+         SUBSTITUA pelo URL do seu perfil se mudar de @
+         ============================================================ -->
+    <a href="https://instagram.com/lumendomusbr"
+       class="link-card primary"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Siga a Lumen Domus no Instagram">
+      <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="link-text">
+        <span class="link-label">Instagram</span>
+        <span class="link-desc">@lumendomusbr — acompanhe nosso conteúdo</span>
+      </span>
+      <span class="link-right">
+        <svg class="link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4"/>
+        </svg>
+      </span>
+    </a>
+
+    <!-- Seção de recomendações -->
+    <p class="section-label" aria-hidden="true">Recomendações</p>
+
+    <!-- ============================================================
+         ARTIGOS PARA O LAR SAGRADO — Shopee Afiliado
+         SUBSTITUA o href pelo seu link de afiliado da Shopee
+         Gere o link em: shopee.com.br/affiliates
+         ============================================================ -->
+    <a href="#placeholder-shopee-artigos"
+       class="link-card"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Artigos para o lar sagrado — loja curada na Shopee">
+      <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path d="M3 9l1-5h16l1 5"/>
+        <rect x="2" y="9" width="20" height="12" rx="1"/>
+        <path d="M9 9v3a3 3 0 006 0V9"/>
+      </svg>
+      <span class="link-text">
+        <span class="link-label">Artigos para o lar sagrado</span>
+        <span class="link-desc">Seleção curada — terços, velas, imagens e mais</span>
+      </span>
+      <span class="link-right">
+        <svg class="link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4"/>
+        </svg>
+      </span>
+    </a>
+
+    <!-- ============================================================
+         LIVROS QUE RECOMENDO — Amazon Afiliado
+         SUBSTITUA o href pelo seu link de afiliado da Amazon
+         Gere o link em: associados.amazon.com.br
+         ============================================================ -->
+    <a href="#placeholder-amazon-livros"
+       class="link-card"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Livros que recomendo — lista na Amazon">
+      <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+        <line x1="8" y1="7" x2="16" y2="7"/>
+        <line x1="8" y1="11" x2="13" y2="11"/>
+      </svg>
+      <span class="link-text">
+        <span class="link-label">Livros que recomendo</span>
+        <span class="link-desc">Formação espiritual — seleção pessoal</span>
+      </span>
+      <span class="link-right">
+        <svg class="link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4"/>
+        </svg>
+      </span>
+    </a>
+
+    <!-- ============================================================
+         MONTE SEU CANTINHO — Shopee Afiliado
+         SUBSTITUA o href pelo seu link de afiliado da Shopee
+         (pode ser uma lista de produtos curada ou link da categoria)
+         ============================================================ -->
+    <a href="#placeholder-shopee-cantinho"
+       class="link-card"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Monte seu cantinho de oração — guia com produtos na Shopee">
+      <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
+        <path d="M9 21V12h6v9"/>
+      </svg>
+      <span class="link-text">
+        <span class="link-label">Monte seu cantinho de oração</span>
+        <span class="link-desc">Do zero ao completo — tudo que você precisa</span>
+      </span>
+      <span class="link-right">
+        <svg class="link-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4"/>
+        </svg>
+      </span>
+    </a>
+
+    <!-- ============================================================
+         SITE — Em breve (desabilitado)
+         Quando o site estiver pronto:
+         1. Troque <span> por <a href="https://seusite.com.br">
+         2. Remova a classe "disabled"
+         3. Remova o aria-disabled="true"
+         4. Troque .link-right por uma seta normal
+         ============================================================ -->
+    <span class="link-card disabled" aria-disabled="true" role="link">
+      <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+      </svg>
+      <span class="link-text">
+        <span class="link-label">Nosso site</span>
+        <span class="link-desc">Chegando em breve</span>
+      </span>
+      <span class="link-right">
+        <span class="soon-badge">Em breve</span>
+      </span>
+    </span>
+
+  </nav>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-ornament" role="presentation"></div>
+    <p class="footer-tagline">Luz que habita o lar</p>
+    <p class="footer-copy">© 2026 Lumen Domus</p>
+  </footer>
+
+</main>
+
+</body>
+</html>
